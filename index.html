@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body id="popup-body">
+    <h1 id="not-intrested"><span style='font-size:100px;'>&#128542;</span> <br> You are Not Intrested </h1>
+    <div class="container-popup">
+        <button class="btn1-popup"><i class="fa-solid fa-xmark"></i></button>
+        <h3>Are you ready to visit my site?</h3>
+       <a href="popup.html"> <button class="btn2-popup">Let's go</button></a>
+        
+    </div>
+
+    <script>
+        let container_popup=document.querySelector(".container-popup")
+        console.log(container_popup)
+        let btn_popup=document.querySelector(".btn1-popup")
+        let not_intrested=document.querySelector("#not-intrested")
+        btn_popup.addEventListener("click",function(){
+            container_popup.style.visibility="hidden"
+            container_popup.style.transition="none";
+             not_intrested.style.visibility="visible";
+             not_intrested.style.top="30%";
+             not_intrested.style.transform="scale(1)"
+             
+        })
+        setTimeout(show,1000);
+
+        function show(){
+            container_popup.style.visibility="visible";
+           
+
+            setTimeout(()=>{
+               
+                container_popup.style.boxShadow = "2px 2px 2px 10px  rgba(100, 200, 140, 0.5)";
+                container_popup.style.transform =" scale(1.2) rotate(360deg) ";
+                
+            },100)
+        }
+       function randomcolor(){
+        let hex="123456789ABCDEF"
+
+       }
+    </script>
+</body>
+</html>
